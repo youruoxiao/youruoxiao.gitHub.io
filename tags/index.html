@@ -1139,40 +1139,6 @@
 </main>
 
 
-<script>
-    function setClipboardText(event){
-        // clipboardData ������Ϊͨ���༭�˵�����ݲ˵��Ϳ�ݼ�ִ�еı༭�����������ģ�Ҳ�����㸴�ƻ��߼�������
-        let clipboardData = event.clipboardData || window.clipboardData;
-        // ���δ���ƻ���δ���У���return��ȥ
-        if (!clipboardData) { return; }
-        event.preventDefault();
-        // Selection ���󣬱�ʾ�û�ѡ����ı���Χ����ĵ�ǰλ�á�
-        //     ����һ���������� -- �û�����ļ��л��߸��Ƶ��ı�ת��Ϊ�ַ���
-        let text = window.getSelection().toString();
-    
-        if (text) {
-            // ����ı���������ȡ���ı�Ĭ���¼�
-            event.preventDefault();
-            // ͨ�����ó�clipboardData����� setData(format, data) ����������������ı�
-            // format: һ��DOMString ��ʾҪ���ӵ� drag object���϶����ݵ����͡�
-            // data: һ�� DOMString��ʾҪ���ӵ� drag object�����ݡ�
-            var copyright = '\n\n'
-            + '\n����Ȩ���������С�'
-            + '\n��ҵת������ϵ���߻����Ȩ������ҵת����ע��������'
-            + '\n����: ������'
-            + '\n΢��/qq: youruoxiao/2335424529'
-            + '\nԭ�ĵ�ַ: https://youruoxiao.github.io/tags/index.html'
-    
-            clipboardData.setData('text/plain', text + copyright);
-    
-        }
-    };
-    var contents = document.getElementsByClassName("content");
-    // �����������ݵ�copy�¼�
-    contents[0].addEventListener('copy',function(e){
-        setClipboardText(e);
-    });
-</script>
 
 
     <footer class="page-footer bg-color">

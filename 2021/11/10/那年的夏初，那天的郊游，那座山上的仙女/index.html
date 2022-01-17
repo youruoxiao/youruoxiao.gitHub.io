@@ -1211,40 +1211,6 @@
 </main>
 
 
-<script>
-    function setClipboardText(event){
-        // clipboardData ������Ϊͨ���༭�˵�����ݲ˵��Ϳ�ݼ�ִ�еı༭�����������ģ�Ҳ�����㸴�ƻ��߼�������
-        let clipboardData = event.clipboardData || window.clipboardData;
-        // ���δ���ƻ���δ���У���return��ȥ
-        if (!clipboardData) { return; }
-        event.preventDefault();
-        // Selection ���󣬱�ʾ�û�ѡ����ı���Χ����ĵ�ǰλ�á�
-        //     ����һ���������� -- �û�����ļ��л��߸��Ƶ��ı�ת��Ϊ�ַ���
-        let text = window.getSelection().toString();
-    
-        if (text) {
-            // ����ı���������ȡ���ı�Ĭ���¼�
-            event.preventDefault();
-            // ͨ�����ó�clipboardData����� setData(format, data) ����������������ı�
-            // format: һ��DOMString ��ʾҪ���ӵ� drag object���϶����ݵ����͡�
-            // data: һ�� DOMString��ʾҪ���ӵ� drag object�����ݡ�
-            var copyright = '\n\n'
-            + '\n����Ȩ���������С�'
-            + '\n��ҵת������ϵ���߻����Ȩ������ҵת����ע��������'
-            + '\n����: ������'
-            + '\n΢��/qq: youruoxiao/2335424529'
-            + '\nԭ�ĵ�ַ: https://youruoxiao.github.io/2021/11/10/%E9%82%A3%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%88%9D%EF%BC%8C%E9%82%A3%E5%A4%A9%E7%9A%84%E9%83%8A%E6%B8%B8%EF%BC%8C%E9%82%A3%E5%BA%A7%E5%B1%B1%E4%B8%8A%E7%9A%84%E4%BB%99%E5%A5%B3/'
-    
-            clipboardData.setData('text/plain', text + copyright);
-    
-        }
-    };
-    var contents = document.getElementsByClassName("content");
-    // �����������ݵ�copy�¼�
-    contents[0].addEventListener('copy',function(e){
-        setClipboardText(e);
-    });
-</script>
 
 
     <footer class="page-footer bg-color">

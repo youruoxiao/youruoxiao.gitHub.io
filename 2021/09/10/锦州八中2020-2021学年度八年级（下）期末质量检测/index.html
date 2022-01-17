@@ -13045,40 +13045,6 @@
 </main>
 
 
-<script>
-    function setClipboardText(event){
-        // clipboardData ������Ϊͨ���༭�˵�����ݲ˵��Ϳ�ݼ�ִ�еı༭�����������ģ�Ҳ�����㸴�ƻ��߼�������
-        let clipboardData = event.clipboardData || window.clipboardData;
-        // ���δ���ƻ���δ���У���return��ȥ
-        if (!clipboardData) { return; }
-        event.preventDefault();
-        // Selection ���󣬱�ʾ�û�ѡ����ı���Χ����ĵ�ǰλ�á�
-        //     ����һ���������� -- �û�����ļ��л��߸��Ƶ��ı�ת��Ϊ�ַ���
-        let text = window.getSelection().toString();
-    
-        if (text) {
-            // ����ı���������ȡ���ı�Ĭ���¼�
-            event.preventDefault();
-            // ͨ�����ó�clipboardData����� setData(format, data) ����������������ı�
-            // format: һ��DOMString ��ʾҪ���ӵ� drag object���϶����ݵ����͡�
-            // data: һ�� DOMString��ʾҪ���ӵ� drag object�����ݡ�
-            var copyright = '\n\n'
-            + '\n����Ȩ���������С�'
-            + '\n��ҵת������ϵ���߻����Ȩ������ҵת����ע��������'
-            + '\n����: ������'
-            + '\n΢��/qq: youruoxiao/2335424529'
-            + '\nԭ�ĵ�ַ: https://youruoxiao.github.io/2021/09/10/%E9%94%A6%E5%B7%9E%E5%85%AB%E4%B8%AD2020-2021%E5%AD%A6%E5%B9%B4%E5%BA%A6%E5%85%AB%E5%B9%B4%E7%BA%A7%EF%BC%88%E4%B8%8B%EF%BC%89%E6%9C%9F%E6%9C%AB%E8%B4%A8%E9%87%8F%E6%A3%80%E6%B5%8B/'
-    
-            clipboardData.setData('text/plain', text + copyright);
-    
-        }
-    };
-    var contents = document.getElementsByClassName("content");
-    // �����������ݵ�copy�¼�
-    contents[0].addEventListener('copy',function(e){
-        setClipboardText(e);
-    });
-</script>
 
 
     <footer class="page-footer bg-color">
